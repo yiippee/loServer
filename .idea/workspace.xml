@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb397f2c-3e1e-4276-b64b-098983c0f204" name="Default Changelist" comment="" />
+    <list default="true" id="eb397f2c-3e1e-4276-b64b-098983c0f204" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoleilu/loServer/LoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoleilu/loServer/LoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/xiaoleilu/loServer/example/ExampleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xiaoleilu/loServer/example/ExampleAction.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -16,7 +24,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1QY4QJJEgRj5kTpsLQzXhUqc55s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -72,20 +82,31 @@
       <updated>1567934177878</updated>
       <workItem from="1567934180027" duration="7166000" />
       <workItem from="1567946976478" duration="332000" />
-      <workItem from="1567947325422" duration="1905000" />
+      <workItem from="1567947325422" duration="6604000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/xiaoleilu/loServer/example/ExampleAction.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="7" />
+          <line>87</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

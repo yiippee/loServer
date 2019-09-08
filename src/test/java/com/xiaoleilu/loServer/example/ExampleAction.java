@@ -3,6 +3,7 @@ package com.xiaoleilu.loServer.example;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUnit;
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.db.Db;
 import cn.hutool.db.Entity;
 import cn.hutool.json.JSONUtil;
@@ -60,21 +61,34 @@ class Test {
 }
 public class ExampleAction implements Action{
 
+	private void insertToDB() {
+		Runnable r = new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("\t\t当前线程是："+Thread.currentThread());
+
+				ThreadUtil.sleep(2*1000);
+				try {
+					Db.use().insert(
+							Entity.create("user")
+									.set("username", "forward")
+									.set("password", "123456")
+					);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		};
+		ThreadUtil.execute(r);
+	}
 	@Override
 	public void doAction(Request request, Response response) {
 		String a = request.getParam("a");
 		response.setContent("response a: " + a);
 		// throw new RuntimeException("Test");
-		try {
-			Db.use().insert(
-					Entity.create("user")
-							.set("username", "forward")
-							.set("password", "123456")
-			);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		// 在线程池中异步执行插入数据库操作
+		this.insertToDB();
 
 		String jsonStr = "{ \"id\":12345}";
 		response.setJsonContent(jsonStr);
