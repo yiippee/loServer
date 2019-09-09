@@ -37,19 +37,21 @@ public class LoServer {
 		long start = System.currentTimeMillis();
 		
 		// Configure the server.
-		final EventLoopGroup bossGroup = new NioEventLoopGroup(1);
-		final EventLoopGroup workerGroup = new NioEventLoopGroup();
+		final EventLoopGroup bossGroup = new NioEventLoopGroup(1); // 用于accept
+		final EventLoopGroup workerGroup = new NioEventLoopGroup(); // 处理读写事件
 		
 		try {
 			final ServerBootstrap b = new ServerBootstrap(); // 1、创建ServerBootStrap实例
 			// 2、设置并绑定Reactor线程池：EventLoopGroup，EventLoop就是处理所有注册到本线程的Selector上面的Channel
-			b.group(bossGroup, workerGroup)
-				.option(ChannelOption.SO_BACKLOG, 1024)
-				.channel(NioServerSocketChannel.class) // 3、设置并绑定服务端的channel
+			b.group(bossGroup, workerGroup);
+			b.option(ChannelOption.SO_BACKLOG, 1024); // 最多可排队个数
+			b.channel(NioServerSocketChannel.class); // 3、设置并绑定服务端的channel
 //				.handler(new LoggingHandler(LogLevel.INFO))
-				// 4、创建处理网络事件的ChannelPipeline和handler，网络事件以流的形式在其中流转，
-					// handler完成多数的功能定制：比如编解码 SSl安全认证
-				.childHandler(new ChannelInitializer<SocketChannel>(){
+			// 4、创建处理网络事件的ChannelPipeline和handler，网络事件以流的形式在其中流转，
+			// handler完成多数的功能定制：比如编解码 SSl安全认证
+			b.childHandler(
+					// 初始化通道
+					new ChannelInitializer<SocketChannel>(){
 					@Override
 					protected void initChannel(SocketChannel ch) throws Exception {
 						ch.pipeline()

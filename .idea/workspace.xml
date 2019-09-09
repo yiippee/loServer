@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb397f2c-3e1e-4276-b64b-098983c0f204" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoleilu/loServer/LoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoleilu/loServer/LoServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/xiaoleilu/loServer/example/ExampleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/xiaoleilu/loServer/example/ExampleAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +80,16 @@
       <updated>1567934177878</updated>
       <workItem from="1567934180027" duration="7166000" />
       <workItem from="1567946976478" duration="332000" />
-      <workItem from="1567947325422" duration="6604000" />
+      <workItem from="1567947325422" duration="8245000" />
     </task>
+    <task id="LOCAL-00001" summary="注释，线程池">
+      <created>1567958522709</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567958522709</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +105,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="注释，线程池" />
+    <option name="LAST_COMMIT_MESSAGE" value="注释，线程池" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
